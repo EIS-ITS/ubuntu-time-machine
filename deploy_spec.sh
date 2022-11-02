@@ -1,0 +1,1 @@
+vss-cli --wait compute vm mk from-file spec/time-machine-spec.yaml
