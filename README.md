@@ -49,6 +49,11 @@ The following sectiosn are recommended to update:
 - ``hostname`` and ``fqdn`` 
 -``users`` section with the list of users to allow access to the server, including `ssh-keys` and hashed passwords. The ``vss-cli misc hash-string`` command is recommended to generate hashed passwords.
 
+## Requirements
+
+- ITS Private Cloud cli aka vss-cli >= v2022.10.1.
+- Target vCenter Folder.
+- Target vCenter Network.
 
 ## Deployment
 
@@ -115,18 +120,18 @@ Once the VM is deployed, you could access it via ``ssh`` on port ``2226`` and se
 
 
     ```
-4. Promote yourself as super user: ```sudo su``.
+4. Promote yourself as super user: ``sudo su``.
 5. Inspect ``/var/log/cloud-init-output.log`` and/or ``/var/log/netatalk.log``.
 
-### Time Machine
+### Time Machine (TM)
 
-#### Mount the Share
+#### Mount TM Share
 1. Open **Finder**
 2. On the menu select **Go > Connect to Server**
 3. Fill out the IP with the following format: ```afp://X.X.X.X```.
 4. Type the OS credentials.
 
-#### Configure Time Machine
+#### Configure TM Backups
 1. Open **System Settings**.
 2. Look for **Time Machine**.
 3. Click on the **+** button.
