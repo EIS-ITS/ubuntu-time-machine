@@ -1,7 +1,7 @@
 #cloud-config
-hostname: vss-time-machine
+hostname: vss-timemachine
 timezone: America/Toronto
-fqdn: vss-tm.eis.utoronto.ca
+fqdn: vss-timemachine.eis.utoronto.ca
 
 ntp:
   enabled: true
@@ -30,14 +30,14 @@ users:
 
 disk_setup:
   /dev/sdb:
-    table_type: 'mbr'
+    table_type: 'gpt'
     layout: True
-    overwrite: False
+    overwrite: True
 
 fs_setup:
   - label: DATA
     device: /dev/sdb
-    partition: 'auto'
+    partition: 1
     filesystem: ext4
 
 mounts:
